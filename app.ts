@@ -64,5 +64,31 @@ function obtenerDatosPersonales(id: number, nombre: string, mail?: string) {
   return datos;
 }
 
-console.log(obtenerDatosPersonales(39, "Gadiel", "correo@correo.com"));
-console.log(obtenerDatosPersonales(62, "Monteabaro"));
+//console.log(obtenerDatosPersonales(39, "Gadiel", "correo@correo.com"));
+//console.log(obtenerDatosPersonales(62, "Monteabaro"));
+
+// Funciones Anónimas
+/*
+  let variable_resultado = function ([argumentos]){...}
+*/
+
+let messages: () => string = function (): string {
+  return "Bienvenido al Canal de Youtube de Gadiel.";
+}; // versión clásica
+
+let mensaje: () => string = (): string => {
+  return "Bienvenido al Canal de Youtube de Gadiel.";
+}; // versión moderna
+
+// console.log(messages());
+
+let arregloNumeros: (number | string)[] = [1, 6, 3, 11, 54, 6, 2, 10, 2, 3, 5];
+
+let numPares: number[] = new Array(10);
+
+for (let i = 0; i < numPares.length; i++) {
+  numPares[i] = i * 2;
+}
+
+
+console.log(numPares[0]);
