@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "npx ts-node app.ts"
+    "dev": "tsx --watch src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }
