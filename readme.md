@@ -214,9 +214,9 @@ class Persona {
 
 ### Decoradores de Clase
 
-Los decoradores permiten añadir anotaciones y metadatos o incluso cambiar el comportamiento de clases, propiedades, métodos y parámetros.
+Los **decoradores** permiten añadir anotaciones y metadatos o incluso cambiar el comportamiento de clases, propiedades, métodos y parámetros.
 
-En los decoradores se puede pasar parametros en caso de que se necesite
+En los **decoradores** se puede pasar parametros en caso de que se necesite
 
 ```ts
 function DecoradorPersona(target: function) {
@@ -231,3 +231,44 @@ class Persona {
 
 ### Instancias
 
+Para la manipulación de objetos o instancias de las clases, se utilizan variables.
+
+Estás variables tienen una semantica propia, la cual se diferencia de los tipos básicos.
+
+El uso del operador **NEW** nos permite instanciar un nuevo objeto
+
+```ts
+let persona = new Persona();
+```
+
+Existen tres formas de inicializar un objeto.
+
+- Por referencia a variables
+
+```ts
+persona.apellido = "Monteabaro";
+persona.nombre = "Gadiel";
+```
+
+- Por medio del constructor
+
+```ts
+let persona = new Persona("Gadiel", "Monteabaro");
+```
+
+- Por medio del a propiedad Setter
+
+```ts
+let persona = new Persona();
+persona.Apellido = "Monteabaro";
+persona.Nombre = "Gadiel";
+```
+
+#### Recomendaciones
+
+- Evitar lineas de longitud de mas de 80 caracteres
+- Indentar los bloques de código
+- Utilizar identificadores nemotécnicos
+- Los identificadores de clases, módulos, interfaces y enumertaciones con **PascalCase**
+- Los identificadores de objetos, métodos, instancias, constantes y proppiedades de los objetos deberán usar **camelCase**.
+- Utilizar comentarios sin la necesidad de exagerar.
