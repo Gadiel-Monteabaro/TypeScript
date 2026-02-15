@@ -185,7 +185,7 @@ Los modificadores de acceso;
   - Aplicado en contextos de herencia, hace que un miembro sea público para sus clases derivadas y para clases en el mismo paquete, pero privados para el resto.
 
 ```ts
-class Personal {
+class Persona {
   private nombre: string;
   private apellido: string;
 
@@ -211,3 +211,23 @@ class Personal {
   }
 }
 ```
+
+### Decoradores de Clase
+
+Los decoradores permiten añadir anotaciones y metadatos o incluso cambiar el comportamiento de clases, propiedades, métodos y parámetros.
+
+En los decoradores se puede pasar parametros en caso de que se necesite
+
+```ts
+function DecoradorPersona(target: function) {
+  console.log(target);
+}
+
+@DecoradorPersona
+class Persona {
+  constructor() {}
+}
+```
+
+### Instancias
+
