@@ -132,3 +132,82 @@ class Persona {
 ```
 
 Este código suele usarse para la inicialización de los atributos del objeto a crear.
+
+### Getters y Setters
+
+Estas propiedades proporcionan la comodidad de los miembros de datos públicos sin los riesgos que provienen del accesos sin comprobar, sin controlar y sin proteger a los datos del objeto.
+
+```ts
+class Persona {
+  constructor(nombre: string, apellido: string) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+
+  get Nombre(): string {
+    return this.nombre;
+  }
+
+  set Nombre(nombre: string) {
+    this.nombre = nombre;
+  }
+
+  get Apellido(): string {
+    return this.Apellido;
+  }
+
+  set Apellido(apellido: string) {
+    this.apellido = apellido;
+  }
+}
+```
+
+### Modificadores de acceso
+
+Los programas orientados a objetos proveen de una forma que obliga a respetar el Principio de Ocultamiento.
+
+Son palabras reservadas que se colocan delante de la declaración de un atributo método de una clase.
+
+Hacen que ese atributo o métodotengan accesibilidad más amplia o menos amplia dentro del programa.
+
+Los modificadores de acceso;
+
+- Public
+  - Un miembro público es accesible tanto desde el interior de la clase, como desde el exterior de la misma.
+
+- Private
+  - Sólo es accesible desde el interior de la propia clase, usando sus propios métodos.
+
+- Readonly
+  - El acceso es de solo lectura.
+
+- Protected
+  - Aplicado en contextos de herencia, hace que un miembro sea público para sus clases derivadas y para clases en el mismo paquete, pero privados para el resto.
+
+```ts
+class Personal {
+  private nombre: string;
+  private apellido: string;
+
+  constructor(nombre: string, apellido: string) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+
+  get Nombre(): string {
+    return this.nombre;
+  }
+
+  set Nombre(nombre: string) {
+    this.nombre = nombre;
+  }
+
+  get Apellido(): string {
+    return this.Apellido;
+  }
+
+  set Apellido(apellido: string) {
+    this.apellido = apellido;
+  }
+}
+```
