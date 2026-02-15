@@ -57,3 +57,78 @@ Su rol es definir nuevos tipos conformados por atributos y operaciones. Es decir
 Los `objetos` por su parte son instancias de una **clase**, lo cual, durante la ejecución de un programa sólo existen los **objetos**.
 
 ## Clases
+
+En TypeScript una clase es representada atravez de una secuencia de simbolos, que forma lo que se denomina como código fuente de la clase.
+
+Esta secuencia es correcta cuando se cumple su **Sintaxis** y **Semántica**.
+
+Las reglas semanticas nos posibilitan detectar errores de interpretación que no permiten que las acciones o instrucciones puedan ser ejecutadas.
+
+```ts
+class Persona {
+  readonly nombre: string;
+  readonly apellido: string;
+
+  private añoNac: number;
+
+  constructor(nombre: string, apellido: string, añoNac: number) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.añoNac = añoNac;
+  }
+
+  public toString(): string {
+    return this.nombre + this.apellido;
+  }
+
+  public edad(añoActual: number): number {
+    return añoActual - this.añoNac;
+  }
+}
+```
+
+### Atributos
+
+Los **Atributos** son variables que se declaran dentro de la clase, y sirven para indicar la forma o características de cada objeto representado por esa clase.
+
+Los **Atributos**, muestran lo que cada objeto es, o también, lo que cada objeto tiene.
+
+```ts
+class Persona {
+  // Atributos de la clase persona
+  nombre: string;
+  apellido: string;
+  añoActual: number;
+}
+```
+
+### Métodos
+
+Los **Métodos** son funciones, procedimientos o rutinas declaradas dentro de la clase. Estos describen el comportamiento o las acciones de los objetos descriptos por esa clase.
+
+```ts
+class Persona {
+  public edad(añoActual: number): number {
+    return añoActual - this.añoNac;
+  }
+}
+```
+
+Dentro de las instrucciones se puede acceder a los miembros definidos en la clase, a la cual pertenece el método.
+
+En caso de que un método no devuelva objeto alguno se omite la cláusula y se especifica como **void**.
+
+### Constructores
+
+Es un método especial que permite instanciar un objeto.
+
+```ts
+class Persona {
+  constructor(nombre: string, apellido: string) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+}
+```
+
+Este código suele usarse para la inicialización de los atributos del objeto a crear.
