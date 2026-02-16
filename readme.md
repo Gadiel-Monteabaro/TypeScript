@@ -272,3 +272,51 @@ persona.Nombre = "Gadiel";
 - Los identificadores de clases, módulos, interfaces y enumertaciones con **PascalCase**
 - Los identificadores de objetos, métodos, instancias, constantes y proppiedades de los objetos deberán usar **camelCase**.
 - Utilizar comentarios sin la necesidad de exagerar.
+
+## Fundamentos del enfoque orientado a objetos
+
+### Principios del desarrollo orientado a objetos
+
+- Jerarquías (herencias, agregación y composición)
+- Abtracción
+- Encapsulamiento
+- Modularidad
+
+Otras (No Fundamentales)
+
+- Polimorfismo
+- Tipificación
+- Concurrencia
+- Persistencia
+
+#### Jerarquías
+
+La relación entre clases es muy importante, de manera tal que puedan compartir atributos y métodos sin necesidad de volver a escribirlos.
+
+Esto permite extender y reutilizar el código sin tener que volver a escribirlo.
+
+##### Herencia
+
+La herencia es un mecanismo donde se puede degfinir una nueva **clase B** en términos de otra **clase A**.
+
+Indicamos que la **clase B** hereda (o deriva) desde la **clase A**, haciendo que _B_ incluya todos los miembros de _A_ como propios.
+
+Estos elementos podrán ser accesidos dependiendo del modificador de acceso [ public , private, protected, "deafult"]
+
+La herencia permite definir un nuevos objeto a partir de otros, agregando las diferencias entre ellos (_Programación diferencial_)
+
+Cuando B (_Sub clases_) hereda de la A (_Super Clase_), se dice que hay una relación de **Herencia**.
+
+- Diagrama UML
+  - En UML se diagrama con una flecha continua terminada en punta cerrada.
+  - La flecha parte de la nueva clase _B_ y termina en la clase desde la cual se hereda _A_.
+
+- _Herencia Simple_
+
+  En la **herencia simple**, una clase puede tener una y sólo una superclase directa.
+
+- _Herencia Múltiple_
+
+  En la **herencia múltiple**, una clase puede tener tantas superclases directas como se desee.
+
+  No todos los lenguajes permiten la herencia multiple, es dificil de controlar a nivel de lenguaje y en general se acepta que la _herencia múltiple_ lleva a diseños mas complejos que se podria obtener usando sólo _herencia simple_.
