@@ -333,4 +333,30 @@ Las jerarquias de agregación y composición son asociaciones entre las clases d
 
 Una abstracción denota las caracteristicas esenciales de un objeto (_datos y operaciones_) que lo distingue de otras clases de objetos.
 
-Decidir el conjunto de abstracciones correcto de un determinado dominio, es el problema central del **diseño orientado a objeto**.
+Decidir el conjunto de abstracciones correcto de un determinado dominio, es el problema central del **diseño orientado a objetos**.
+
+Nos centramos en la visión externa de un objeto, lo cual nose permite separar el comportamiento esencial de un objeto de su implementación.
+
+Los mecanismos de abstracción en **EOO**:
+
+- _Generalización_
+
+  Es un mecanismos el cual un conjunto de clases de objetos son agrupados en un clase de nivel superior.
+  - La **Super Clase** almacena datos generales de las clases.
+  - Las **Subclases** almacenan datos particulares.
+
+- _Especialización_
+
+  Contrario a la **generalización**. Una clase **Medico** es una especialización de la clase **Persona**, a su vez, la clase **Persona** es una generalización de la superclase **Medico**
+
+- _Agregación_
+
+  Es un mecanismo por el cual una clase de objeto es definida a partir de sus partes (otras clases de objetos). Por ejemplo un computador que puede descomponerse en CPU, ULA, la memoria y los dispositivos de entrada.
+
+- _Clasificación_
+
+  Consiste en definir una clase a partir de un conjunto de objetos que tienen comportamiento similar.
+
+  La ejemplificación es lo contrario, corresponde a la instancia de una clase.
+
+  La clasificación es el medio por el que ordenamos el conocimiento ubicado en las abstracciones.
