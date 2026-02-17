@@ -289,13 +289,13 @@ Otras (No Fundamentales)
 - Concurrencia
 - Persistencia
 
-#### Jerarquías
+### Jerarquías
 
 La relación entre clases es muy importante, de manera tal que puedan compartir atributos y métodos sin necesidad de volver a escribirlos.
 
 Esto permite extender y reutilizar el código sin tener que volver a escribirlo.
 
-##### Herencia
+#### Herencia
 
 La herencia es un mecanismo donde se puede degfinir una nueva **clase B** en términos de otra **clase A**.
 
@@ -321,7 +321,7 @@ Cuando B (_Sub clases_) hereda de la A (_Super Clase_), se dice que hay una rela
 
   No todos los lenguajes permiten la herencia multiple, es dificil de controlar a nivel de lenguaje y en general se acepta que la _herencia múltiple_ lleva a diseños mas complejos que se podria obtener usando sólo _herencia simple_.
 
-##### Agregación y Composición
+#### Agregación y Composición
 
 Las jerarquias de agregación y composición son asociaciones entre las clases del tipo **"Es parte de"**.
 
@@ -329,3 +329,8 @@ Las jerarquias de agregación y composición son asociaciones entre las clases d
   - En UML el diamante relleno representa la **composición** y el diamante vacío la **agregación**.
   - El diamante va ubicado del lado de la **Super clase**.
 
+### Abstracción
+
+Una abstracción denota las caracteristicas esenciales de un objeto (_datos y operaciones_) que lo distingue de otras clases de objetos.
+
+Decidir el conjunto de abstracciones correcto de un determinado dominio, es el problema central del **diseño orientado a objeto**.
