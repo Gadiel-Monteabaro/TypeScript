@@ -320,3 +320,12 @@ Cuando B (_Sub clases_) hereda de la A (_Super Clase_), se dice que hay una rela
   En la **herencia múltiple**, una clase puede tener tantas superclases directas como se desee.
 
   No todos los lenguajes permiten la herencia multiple, es dificil de controlar a nivel de lenguaje y en general se acepta que la _herencia múltiple_ lleva a diseños mas complejos que se podria obtener usando sólo _herencia simple_.
+
+##### Agregación y Composición
+
+Las jerarquias de agregación y composición son asociaciones entre las clases del tipo **"Es parte de"**.
+
+- Diagrama UML
+  - En UML el diamante relleno representa la **composición** y el diamante vacío la **agregación**.
+  - El diamante va ubicado del lado de la **Super clase**.
+
