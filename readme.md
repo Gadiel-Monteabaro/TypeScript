@@ -398,3 +398,13 @@ class Persona {
   }
 }
 ```
+
+### Modularidad
+
+La modularidad permite independencia entre las diferentes partes del sistema.
+
+Lo que cosnsite en dividir un programa en módulos o partes, que pueden ser compilados separadament, pero que tienen conexiones con otros módulos.
+
+En un mismo modulo se suele colocar clases y objetos que guarden estrecha relación.
+
+Esto está relacionado con el ocultamiento de la información.
