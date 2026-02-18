@@ -360,3 +360,41 @@ Los mecanismos de abstracción en **EOO**:
   La ejemplificación es lo contrario, corresponde a la instancia de una clase.
 
   La clasificación es el medio por el que ordenamos el conocimiento ubicado en las abstracciones.
+
+### Encapsulamiento
+
+El **encapsulamiento**es la propiedad que permite ocultar los detalles de implementación del objeto, mostrando solo lo relevante.
+
+Esta parte de código pertenece a la parte privada de la clase y no puede ser accedida desde ningún otro lugar.
+
+El tambien conocido _Principio de ocultamiento_ dice que solo los métodos de una clase deberían de tener acceso directo a los atributos de esa clase, para impedir que un atributo sea modifiado en forma insegura o no controlada por la propia clase.
+
+El _Principio de ocultamiento_ es la causa por la cual los atributos se declaran como privados, y los métodos como públicos.
+
+```ts
+class Persona {
+  private nombre: string;
+  private apellido: string;
+
+  constructor(nombre: string, apellido: string) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+
+  get Nombre(): string {
+    return this.nombre;
+  }
+
+  set Nombre(nombre: string) {
+    this.nombre = nombre;
+  }
+
+  get Apellido(): string {
+    return this.Apellido;
+  }
+
+  set Apellido(apellido: string) {
+    this.apellido = apellido;
+  }
+}
+```
