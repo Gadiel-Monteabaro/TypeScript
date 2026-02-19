@@ -401,10 +401,45 @@ class Persona {
 
 ### Modularidad
 
-La modularidad permite independencia entre las diferentes partes del sistema.
+La **modularidad** permite independencia entre las diferentes partes del sistema.
 
 Lo que cosnsite en dividir un programa en módulos o partes, que pueden ser compilados separadament, pero que tienen conexiones con otros módulos.
 
-En un mismo modulo se suele colocar clases y objetos que guarden estrecha relación.
+En un mismo módulo se suele colocar clases y objetos que guarden estrecha relación.
 
 Esto está relacionado con el ocultamiento de la información.
+
+### Interfaces
+
+Las **intefaces** nos perm,iten crear nuevos tipos para comprobar los distintos tipos de las variables, un ejemplo de esto cuando se pasan como argumentos o retornamos un valor al momento de realizar un fetch de datos en el frontend o validar los distintos tipos de datos desde el backend.
+
+TypeScript permite crear interfaces según cuantas sean necesarias permitiendonos evitar el anidamiento de objetos.
+
+```ts
+interface IPersona {
+  nombre: string;
+  edad: number;
+  direccion: {
+    calle: string;
+    pais: string;
+    ciudad: string;
+  };
+  mostrarDireccion: () => string;
+}
+
+const persona: IPersona = {
+  nombre: "Gadiel",
+  edad: 30,
+  direccion: {
+    calle: "Ushuaia",
+    pais: "Argentina",
+    ciudad: "Cordoba",
+  },
+
+  mostrarDireccion() {
+    return `${(this.nombre, this.direccion.ciudad, this.direccion.pais)}`;
+  },
+};
+
+console.log(persona.mostrarDireccion());
+```
